@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podpy
+  labels:
+    label_name: pp
+
+spec: 
+  containers: 
+    - image: mona774/imgpp
+      name: cp
+      resources:
+        limits:
+          memory: "512Mi"
+          cpu: "1"
