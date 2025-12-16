@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: depp
+
+spec:
+  selector:
+    matchLabels:
+       label_name: pp
+  replicas: 2
+  template: 
+    metadata:
+      name: podpy
+      labels:
+        label_name: pp
+
+    spec: 
+      containers: 
+        - image: mona774/imgpy
+          name: cd
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "1"
