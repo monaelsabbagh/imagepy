@@ -1,6 +1,8 @@
-FROM python:3.10
+FROM python:3.10-alpine
 
 WORKDIR /app
+
+RUN apk update && apk add iputils
 
 COPY file.py .
 
